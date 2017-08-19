@@ -45,17 +45,11 @@ namespace MaryPoppins
             }
         }
 
+        
+
         //Game Logic
         private void button1_Click(object sender, EventArgs e)
         {
-
-            label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
-            if (Nanny.setMaxTasksLeftcounter <= 1)
-            {
-                proceedButton.Enabled = false;
-                label5.Text = "Maximum Tasks per Day Reached, Nanny is tired. PLease start a new day!";
-            }
-            Nanny.setMaxTasksLeftcounter--;
             string nannysMode = nannysModeComboBox.Text;
             string taskSelection = taskSelectionComboBox.Text;
             string stateOfChild = stateOfChildComboBox.Text;
@@ -63,6 +57,8 @@ namespace MaryPoppins
             {
                 if (taskSelection == "Feed Milk")
                 {
+                    label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                    Nanny.setMaxTasksLeftcounter--;
                     if (nannysMode == "Calm")
                     {
                         label1.Text = ("Nanny fetches glass of milk!");
@@ -77,6 +73,8 @@ namespace MaryPoppins
                 }
                 else if (taskSelection == "Take baby to sleep")
                 {
+                    label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                    Nanny.setMaxTasksLeftcounter--;
                     if (nannysMode == "Calm")
                     {
                         label1.Text = ("Nanny makes baby sleep!");
@@ -90,6 +88,8 @@ namespace MaryPoppins
                 }
                 else if (taskSelection == "Bath the Baby")
                 {
+                    label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                    Nanny.setMaxTasksLeftcounter--;
                     if (nannysMode == "Calm")
                     {
                         label1.Text = ("Nanny bathing the Baby!");
@@ -103,6 +103,8 @@ namespace MaryPoppins
                 }
                 else if (taskSelection == "Make Baby's Bed")
                 {
+                    label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                    Nanny.setMaxTasksLeftcounter--;
                     if (nannysMode == "Calm")
                     {
                         label1.Text = ("Nanny makes baby's Bed!");
@@ -116,6 +118,8 @@ namespace MaryPoppins
                 }
                 else if (taskSelection == "Diaper the Baby")
                 {
+                    label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                    Nanny.setMaxTasksLeftcounter--;
                     if (nannysMode == "Calm")
                     {
                         label1.Text = ("Nanny diapering the Baby!");
@@ -127,11 +131,122 @@ namespace MaryPoppins
                         mainDisplayPictureBox.BackgroundImage = Properties.Resources.diaperBaby;
                     }
                 }
+                else if (taskSelection == "Sing a Song")
+                {
+                    if (nannysMode == "Calm")
+                    {
+                        label1.Text = ("Nanny sings a song!");
+                        mainDisplayPictureBox.BackgroundImage = Properties.Resources.singingNanny;
+                        label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                        Nanny.setMaxTasksLeftcounter--;
+                    }
+                    else
+                    {
+                        label1.Text = ("Nanny is Angry, She will not sing");
+                        mainDisplayPictureBox.BackgroundImage = Properties.Resources.angryNanny;
+                    }
+                }
+                else if (taskSelection == "Clean the Room")
+                {
+                    if (nannysMode == "Calm")
+                    {
+                        label1.Text = ("Nanny cleans the Room!");
+                        mainDisplayPictureBox.BackgroundImage = Properties.Resources.cleaningNanny;
+                        label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                        Nanny.setMaxTasksLeftcounter--;
+                    }
+                    else
+                    {
+                        label1.Text = ("Nanny is angry,she will not clean the room!");
+                        mainDisplayPictureBox.BackgroundImage = Properties.Resources.angryNanny;
+                    }
+                }
+                else if (taskSelection == "Prepare baby's Meal")
+                {
+                    if (nannysMode == "Calm")
+                    {
+                        label1.Text = ("Nanny prepares baby's Meals!");
+                        mainDisplayPictureBox.BackgroundImage = Properties.Resources.cookingNanny;
+                        label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                        Nanny.setMaxTasksLeftcounter--;
+                    }
+                    else
+                    {
+                        label1.Text = ("Nanny is angry, She will not cook!");
+                        mainDisplayPictureBox.BackgroundImage = Properties.Resources.angryNanny;
+                    }
+                }
+
+                if (Nanny.setMaxTasksLeftcounter <= 1)
+                {
+                    proceedButton.Enabled = false;
+                    label5.Text = "Maximum Tasks per Day Reached, Nanny is tired. PLease start a new day!";
+                }
             }
             else if (stateOfChild == "Asleep")
             {
-                label1.Text = ("Baby is Asleep");
-                mainDisplayPictureBox.BackgroundImage = Properties.Resources.sleepingChild;
+
+                if(taskSelection == "Feed Milk" || taskSelection == "Take baby to sleep" || taskSelection == "Bath the Baby" 
+                        || taskSelection == "Make Baby's Bed" || taskSelection == "Diaper the Baby")
+                {
+                    label1.Text = ("Baby is Asleep, Please select a different task");
+                    mainDisplayPictureBox.BackgroundImage = Properties.Resources.sleepingChild;
+
+                }
+                else
+                {
+                    if (taskSelection == "Sing a Song")
+                    {
+                        if (nannysMode == "Calm")
+                        {
+                            label1.Text = ("Nanny sings a song!");
+                            mainDisplayPictureBox.BackgroundImage = Properties.Resources.singingNanny;
+                            label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                            Nanny.setMaxTasksLeftcounter--;
+                        }
+                        else
+                        {
+                            label1.Text = ("Nanny is Angry, She will not sing");
+                            mainDisplayPictureBox.BackgroundImage = Properties.Resources.angryNanny;
+                        }
+                    }
+                    if (taskSelection == "Clean the Room")
+                    {
+                        if (nannysMode == "Calm")
+                        {
+                            label1.Text = ("Nanny cleans the Room!");
+                            mainDisplayPictureBox.BackgroundImage = Properties.Resources.cleaningNanny;
+                            label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                            Nanny.setMaxTasksLeftcounter--;
+                        }
+                        else
+                        {
+                            label1.Text = ("Nanny is angry,she will not clean the room!");
+                            mainDisplayPictureBox.BackgroundImage = Properties.Resources.angryNanny;
+                        }
+                    }
+                    if (taskSelection == "Prepare baby's Meal")
+                    {
+                        if (nannysMode == "Calm")
+                        {
+                            label1.Text = ("Nanny prepares baby's Meals!");
+                            mainDisplayPictureBox.BackgroundImage = Properties.Resources.cookingNanny;
+                            label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
+                            Nanny.setMaxTasksLeftcounter--;
+                        }
+                        else
+                        {
+                            label1.Text = ("Nanny is angry, She will not cook!");
+                            mainDisplayPictureBox.BackgroundImage = Properties.Resources.angryNanny;
+                        }
+                    }
+                }
+                if (Nanny.setMaxTasksLeftcounter <= 1)
+                {
+                    proceedButton.Enabled = false;
+                    label5.Text = "Maximum Tasks per Day Reached, Nanny is tired. PLease start a new day!";
+                }
+
             }
         }
         //Show UserManual
@@ -158,6 +273,8 @@ namespace MaryPoppins
             {
                 nannyModePictureBox.BackgroundImage = Properties.Resources.angryNanny;
             }
+
+
             //Enabling proceed button only if all the options are selected
             if ((nannysModeComboBox.SelectedIndex > 0) && (stateOfChildComboBox.SelectedIndex > 0)
                     && (taskSelectionComboBox.SelectedIndex > 0))
@@ -177,6 +294,40 @@ namespace MaryPoppins
 
         private void stateOfChildComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Hide unwanted items according to childs state
+            if (stateOfChildComboBox.SelectedIndex == 1)
+            {
+                taskSelectionComboBox.Items.Remove("Feed Milk");
+                taskSelectionComboBox.Items.Remove("Take Baby to Sleep");
+                taskSelectionComboBox.Items.Remove("Bath the Baby");
+                taskSelectionComboBox.Items.Remove("Make Baby's Bed");
+                taskSelectionComboBox.Items.Remove("Diaper the Baby");
+            }
+            if(stateOfChildComboBox.SelectedIndex == 0 || stateOfChildComboBox.SelectedIndex == 2)
+            {
+                //Restoring the removed items once the childs' state changed
+                if (!taskSelectionComboBox.Items.Contains("Feed Milk"))
+                {
+                    taskSelectionComboBox.Items.Add("Feed Milk");
+                }
+                if (!taskSelectionComboBox.Items.Contains("Take Baby to Sleep"))
+                {
+                    taskSelectionComboBox.Items.Add("Take Baby to Sleep");
+                }
+                if (!taskSelectionComboBox.Items.Contains("Bath the Baby"))
+                {
+                    taskSelectionComboBox.Items.Add("Bath the Baby");
+                }
+                if (!taskSelectionComboBox.Items.Contains("Make Baby's Bed"))
+                {
+                    taskSelectionComboBox.Items.Add("Make Baby's Bed");
+                }
+                if (!taskSelectionComboBox.Items.Contains("Diaper the Baby"))
+                {
+                    taskSelectionComboBox.Items.Add("Diaper the Baby");
+                }
+
+            }
 
         }
 

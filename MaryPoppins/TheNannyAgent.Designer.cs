@@ -42,15 +42,15 @@
             this.taskSelectionComboBox = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setNewMaxTasksPerDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
+            this.closeButton = new System.Windows.Forms.Button();
             this.nannyModePictureBox = new System.Windows.Forms.PictureBox();
             this.mainDisplayPictureBox = new System.Windows.Forms.PictureBox();
-            this.closeButton = new System.Windows.Forms.Button();
+            this.setNewMaxTasksPerDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -167,10 +167,13 @@
             this.taskSelectionComboBox.Items.AddRange(new object[] {
             "----Select----",
             "Feed Milk",
-            "Take baby to sleep",
+            "Take Baby to Sleep",
             "Bath the Baby",
             "Make Baby\'s Bed",
-            "Diaper the Baby"});
+            "Diaper the Baby",
+            "Sing a Song",
+            "Clean the Room",
+            "Prepare baby\'s Meal"});
             this.taskSelectionComboBox.Location = new System.Drawing.Point(7, 26);
             this.taskSelectionComboBox.Name = "taskSelectionComboBox";
             this.taskSelectionComboBox.Size = new System.Drawing.Size(130, 21);
@@ -197,22 +200,6 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // setNewMaxTasksPerDayToolStripMenuItem
-            // 
-            this.setNewMaxTasksPerDayToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("setNewMaxTasksPerDayToolStripMenuItem.Image")));
-            this.setNewMaxTasksPerDayToolStripMenuItem.Name = "setNewMaxTasksPerDayToolStripMenuItem";
-            this.setNewMaxTasksPerDayToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.setNewMaxTasksPerDayToolStripMenuItem.Text = "New Day";
-            this.setNewMaxTasksPerDayToolStripMenuItem.Click += new System.EventHandler(this.setNewMaxTasksPerDayToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
-            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -229,14 +216,6 @@
             this.userManualToolStripMenuItem.Text = "User Manual";
             this.userManualToolStripMenuItem.Click += new System.EventHandler(this.userManualToolStripMenuItem_Click);
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.aboutToolStripMenuItem.Text = "About...";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -244,6 +223,16 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 14;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(460, 374);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(102, 23);
+            this.closeButton.TabIndex = 17;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click_1);
             // 
             // nannyModePictureBox
             // 
@@ -263,15 +252,29 @@
             this.mainDisplayPictureBox.TabIndex = 15;
             this.mainDisplayPictureBox.TabStop = false;
             // 
-            // closeButton
+            // setNewMaxTasksPerDayToolStripMenuItem
             // 
-            this.closeButton.Location = new System.Drawing.Point(460, 374);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(102, 23);
-            this.closeButton.TabIndex = 17;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click_1);
+            this.setNewMaxTasksPerDayToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("setNewMaxTasksPerDayToolStripMenuItem.Image")));
+            this.setNewMaxTasksPerDayToolStripMenuItem.Name = "setNewMaxTasksPerDayToolStripMenuItem";
+            this.setNewMaxTasksPerDayToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.setNewMaxTasksPerDayToolStripMenuItem.Text = "New Day";
+            this.setNewMaxTasksPerDayToolStripMenuItem.Click += new System.EventHandler(this.setNewMaxTasksPerDayToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.aboutToolStripMenuItem.Text = "About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // TheNannyAgent
             // 

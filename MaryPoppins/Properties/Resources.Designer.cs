@@ -83,6 +83,26 @@ namespace MaryPoppins.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cleaningNanny {
+            get {
+                object obj = ResourceManager.GetObject("cleaningNanny", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cookingNanny {
+            get {
+                object obj = ResourceManager.GetObject("cookingNanny", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diaperBaby {
             get {
                 object obj = ResourceManager.GetObject("diaperBaby", resourceCulture);
@@ -146,6 +166,16 @@ namespace MaryPoppins.Properties {
         internal static System.Drawing.Bitmap normalNanny {
             get {
                 object obj = ResourceManager.GetObject("normalNanny", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap singingNanny {
+            get {
+                object obj = ResourceManager.GetObject("singingNanny", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

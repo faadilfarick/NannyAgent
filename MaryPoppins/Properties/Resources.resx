@@ -148,4 +148,13 @@
   <data name="makingTheBed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\makingTheBed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cleaningNanny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\cleaningNanny.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cookingNanny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\cookingNanny.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="singingNanny" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\singingNanny.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
