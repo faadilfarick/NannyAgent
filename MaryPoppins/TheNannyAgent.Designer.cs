@@ -42,15 +42,15 @@
             this.taskSelectionComboBox = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setNewMaxTasksPerDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
             this.nannyModePictureBox = new System.Windows.Forms.PictureBox();
             this.mainDisplayPictureBox = new System.Windows.Forms.PictureBox();
-            this.setNewMaxTasksPerDayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -200,6 +200,22 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // setNewMaxTasksPerDayToolStripMenuItem
+            // 
+            this.setNewMaxTasksPerDayToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("setNewMaxTasksPerDayToolStripMenuItem.Image")));
+            this.setNewMaxTasksPerDayToolStripMenuItem.Name = "setNewMaxTasksPerDayToolStripMenuItem";
+            this.setNewMaxTasksPerDayToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.setNewMaxTasksPerDayToolStripMenuItem.Text = "New Day";
+            this.setNewMaxTasksPerDayToolStripMenuItem.Click += new System.EventHandler(this.setNewMaxTasksPerDayToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -215,6 +231,14 @@
             this.userManualToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.userManualToolStripMenuItem.Text = "User Manual";
             this.userManualToolStripMenuItem.Click += new System.EventHandler(this.userManualToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.aboutToolStripMenuItem.Text = "About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // label5
             // 
@@ -251,30 +275,6 @@
             this.mainDisplayPictureBox.Size = new System.Drawing.Size(538, 225);
             this.mainDisplayPictureBox.TabIndex = 15;
             this.mainDisplayPictureBox.TabStop = false;
-            // 
-            // setNewMaxTasksPerDayToolStripMenuItem
-            // 
-            this.setNewMaxTasksPerDayToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("setNewMaxTasksPerDayToolStripMenuItem.Image")));
-            this.setNewMaxTasksPerDayToolStripMenuItem.Name = "setNewMaxTasksPerDayToolStripMenuItem";
-            this.setNewMaxTasksPerDayToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.setNewMaxTasksPerDayToolStripMenuItem.Text = "New Day";
-            this.setNewMaxTasksPerDayToolStripMenuItem.Click += new System.EventHandler(this.setNewMaxTasksPerDayToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.aboutToolStripMenuItem.Text = "About...";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // TheNannyAgent
             // 

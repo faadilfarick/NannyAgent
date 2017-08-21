@@ -71,7 +71,7 @@ namespace MaryPoppins
                         mainDisplayPictureBox.BackgroundImage = Properties.Resources.fetchesMilk;
                     }
                 }
-                else if (taskSelection == "Take baby to sleep")
+                else if (taskSelection == "Take Baby to Sleep")
                 {
                     label5.Text = "Tasks Left = " + (Nanny.setMaxTasksLeftcounter - 1);
                     Nanny.setMaxTasksLeftcounter--;
@@ -180,6 +180,7 @@ namespace MaryPoppins
                 if (Nanny.setMaxTasksLeftcounter <= 1)
                 {
                     proceedButton.Enabled = false;
+                    label5.ForeColor = Color.Red;
                     label5.Text = "Maximum Tasks per Day Reached, Nanny is tired. PLease start a new day!";
                 }
             }
@@ -244,6 +245,7 @@ namespace MaryPoppins
                 if (Nanny.setMaxTasksLeftcounter <= 1)
                 {
                     proceedButton.Enabled = false;
+                    label5.ForeColor = Color.Red;
                     label5.Text = "Maximum Tasks per Day Reached, Nanny is tired. PLease start a new day!";
                 }
 
@@ -274,7 +276,6 @@ namespace MaryPoppins
                 nannyModePictureBox.BackgroundImage = Properties.Resources.angryNanny;
             }
 
-
             //Enabling proceed button only if all the options are selected
             if ((nannysModeComboBox.SelectedIndex > 0) && (stateOfChildComboBox.SelectedIndex > 0)
                     && (taskSelectionComboBox.SelectedIndex > 0))
@@ -294,6 +295,15 @@ namespace MaryPoppins
 
         private void stateOfChildComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            if (stateOfChildComboBox.Text == "----Select----")
+            {
+                taskSelectionComboBox.Enabled = false;
+            }
+            else
+            {
+                taskSelectionComboBox.Enabled = true;
+            }
             //Hide unwanted items according to childs state
             if (stateOfChildComboBox.SelectedIndex == 1)
             {
@@ -348,5 +358,6 @@ namespace MaryPoppins
             smt.ShowDialog();
             
         }
+
     }    
 }

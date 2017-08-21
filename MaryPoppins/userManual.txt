@@ -2,7 +2,7 @@ User Manual
 
 *How to play
 
-    You must Select a state of the child which are "Asleep" and "Awake" in order to Nanny agent to know whether the baby is awake or asleep. Then a task should be selected from the task selection combo box, there after we should know the Nanny's mode whether she's in anger or calm which is known via the Nanny's mode combo box.
+    You must Select a state of the child which are "Asleep" and "Awake" in order to Nanny agent to know whether the baby is awake or asleep. Then a task should be selected from the task selection combo box (System will automatically filter tasks according to the childs mode you selected), there after we should know the Nanny's mode whether she's in anger or calm which is known via the Nanny's mode combo box.
 
     When you selected all the combo boxes the proceed button will be enabled and nanny's mode will be displayed in the picture box in right to the main picture window.
     After you pressed the "proceed" button the game will display you the Nanny's action along with the image depending on the state of child and the task selected by you.
